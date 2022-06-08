@@ -9,11 +9,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/locadora.feature",
         glue = "steps",
-        plugin = "pretty", //Deixa bonitinho
+        plugin = {"pretty", "html:target/report-html","json:target/report.json"}, //Deixa bonitinho, coloca a documentação na pasta report, documentação em estado bruto (.json)
         monochrome = true, //Tira as cores
         snippets = SnippetType.CAMELCASE, //Coloca os STEPS em Camel Case
-        dryRun = false,
+        dryRun = false, //Mostra os steps faltantes
         strict = false // Aumenta o rigor da plotagem
 )
-public class Runner {
+public class RunnerTest {
 }
