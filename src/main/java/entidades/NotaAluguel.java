@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class NotaAluguel {
 
-    private int preco;
+    private int preco, pontuacao;
 
     private Date dataEntrega;
 
@@ -22,5 +22,13 @@ public class NotaAluguel {
 
     public void setDataEntrega(Date dataEntrega) {
         this.dataEntrega = dataEntrega;
+    }
+
+    public int getPontuacao() {
+        return pontuacao;
+    }
+
+    public void setPontuacao(int pontuacao) {
+        this.pontuacao = pontuacao;
     }
 }
